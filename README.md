@@ -1,5 +1,5 @@
 # c64-magic-desk-512k
-Hardware design of Magic Desk compatible C64 cartridge for up to 512k
+Hardware design of Magic Desk compatible C64 cartridge for up to 512k (expandable up to 1Mb)
 
 Hardware Description
 --------------------
@@ -26,10 +26,12 @@ JA16 [X X X]
 
 These jumpers HAVE to be configured before plugging the cartridge to your C64! Different types of EPROMs and their FLASH variants have some pins swapped, and if you are using a chip smaller than the maximum size, the unused adress lines have to be pulled high on the EPROM side to ensure proper functioning. Also, 27C512 is "shorter" by 4 pins, so it's power supply pin must be connected to +5V instead of being allocated as A17 on the larger ones. The rightmost pins of all 4 jumpers are +5V, and the leftmost pins are the address lines. The middle pin of the jumpers are connected according to the table:
 
-JA16 - pin 2   - routes either A16 or VCC to pin  2 of EPROM
-JA17 - pin 30  - routes either A17 or VCC to pin 30 of EPROM
-JA18 - pin 1   - routes either A18 or VCC to pin  1 of EPROM
- JF  - pin 31  - routes either A18 or VCC to pin 31 of EPROM
+| Jumper | Pin | Description                                 |
+|--------|-----|---------------------------------------------|
+| JA16   | 2   | routes either A16 or VCC to pin 2 of EPROM  |
+| JA17   | 30  | routes either A17 or VCC to pin 30 of EPROM |
+| JA18   | 1   | routes either A18 or VCC to pin 1 of EPROM  |
+| JF     | 31  | routes either A18 or VCC to pin 31 of EPROM |
 
 Here is the table for configuring the jumpers on most common variants of EPROMS and their FLASH counterparts.
 
@@ -65,4 +67,5 @@ Copyright
 ---------
 
 Cartridge schematics and PCB design (c) 2013-2019 Marko Šolajić
+
 Released under GNU General Public License v3.0, see LICENSE file.
