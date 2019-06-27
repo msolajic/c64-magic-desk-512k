@@ -1,6 +1,8 @@
 # c64-magic-desk-512k
 Hardware design of Magic Desk compatible C64 cartridge for up to 512k (expandable up to 1Mb)
 
+This is the hardware part that accompanies the project of [Magic Desk Cartridge Generator](https://bitbucket.org/zzarko/magic-desk-cartridge-generator/)
+
 Hardware Description
 --------------------
 
